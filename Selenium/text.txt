@@ -22,3 +22,53 @@ h.	getText()
 i.	isDisplayed()
 j.	isEnabled()
 k.	isSelected()
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Driver Methods (Browser Commands)
+These methods control the browser window itself.
+
+a. get(String url) Loads a new web page in the current browser window. It waits for the page to load completely before giving control back to the script.
+
+b. getCurrentUrl() Fetches the string URL currently visible in the browser’s address bar. This is often used to verify if a redirection happened correctly.
+
+c. getPageSource() Returns the entire HTML source code of the current page as a String. This is useful for finding hidden text or verifying underlying scripts.
+
+d. getTitle() Retrieves the title of the current web page (the text displayed on the browser tab). It returns it as a String.
+
+e. close() vs quit() close(): Closes only the currently active browser window or tab that the driver is focused on. quit(): Closes all open browser windows and tabs and terminates the WebDriver session safely.
+
+f. getWindowHandle() Returns a unique alphanumeric ID (handle) for the current active window. This ID is used to switch focus back to this specific window later.
+
+g. getWindowHandles() Returns a Set of unique IDs for all currently open windows or tabs. This is essential for iterating through multiple open tabs to switch between them.
+
+h. navigate() Returns a Navigation interface that allows you to move back, forward, refresh, or load a URL while maintaining browser history.
+
+i. switchTo() Returns a TargetLocator interface used to change the driver's focus from the main page to other contexts like Alerts, Frames (iFrames), or different Windows.
+
+2. WebElement Methods (Element Commands)
+These methods interact with specific HTML elements (buttons, inputs, etc.) on the page.
+
+a. sendKeys(CharSequence... keys) Simulates typing into an element. It enters the specified sequence of text into input fields or text areas.
+
+b. clear() Erases any existing text in an editable text field or text area. It is usually called before sendKeys to ensure clean input.
+
+c. click() Simulates a mouse click on the element. This works for buttons, links, checkboxes, and radio buttons.
+
+d. findElement(By locator) Finds the first element inside the current context that matches the locator. If no match is found, it throws a NoSuchElementException.
+
+e. findElements(By locator) Returns a list of all elements that match the locator. If no matches are found, it returns an empty list (it does not throw an exception).
+
+f. getDomAttribute(String name) Retrieves the value of the specified attribute (like "href", "value", or "id") strictly as declared in the HTML source code.
+
+g. getScreenShotAs(OutputType target) Captures an image of that specific element only (not the whole page) and saves it in the specified format (like a File or Base64 String).
+
+h. getText() Retrieves the visible inner text of the element. This is the text displayed between the opening and closing HTML tags.
+
+i. isDisplayed() Returns true if the element is present in the DOM and visible to the user on the screen; otherwise, it returns false.
+
+j. isEnabled() Returns true if the element is active and ready to accept interaction (not disabled or greyed out); otherwise, it returns false.
+
+k. isSelected() Returns true if a radio button or checkbox is currently checked; otherwise, it returns false. This is mainly used for verification.
