@@ -1,1 +1,2 @@
-Write a selenium program to demonstrate CSS Selector locator with Id and class
+Write a selenium program to demonstrate CSS Selector locator with Id and class.
+Write a selenium script to print the value of “href” attribute of “anchor” tag using tagName using any website and display total no of Anchor tags.
