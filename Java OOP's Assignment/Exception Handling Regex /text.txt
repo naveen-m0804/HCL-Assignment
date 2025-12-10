@@ -1,4 +1,0 @@
-1.	Create the user defined exception “InvalidAgeException” which must be thrown and display “Candidate is not eligible to vote” if input is <18, otherwise it should display “Candidate is eligible to vote”
-2.	Write a program to validate the below phone no with Regular Expression
-001-765-989-3421
-+1-456-765-9345
